@@ -1,0 +1,204 @@
+.cart-wrapper{
+max-width:1100px;
+margin:40px auto;
+padding:20px;
+}
+
+.cart-title{
+margin-bottom:30px;
+font-size:28px;
+font-weight:600;
+}
+
+.cart-layout{
+display:grid;
+grid-template-columns:1fr 300px;
+gap:40px;
+}
+
+/* CART ITEMS */
+
+.cart-item{
+display:flex;
+align-items:center;
+gap:20px;
+padding:20px 0;
+border-bottom:1px solid #eee;
+}
+
+.cart-img{
+width:80px;
+height:80px;
+object-fit:cover;
+border-radius:6px;
+}
+
+.cart-info{
+flex:1;
+}
+
+.cart-name{
+font-size:16px;
+font-weight:500;
+margin-bottom:6px;
+}
+
+.cart-price{
+color:#666;
+margin-bottom:10px;
+}
+
+/* QUANTITY */
+
+.qty-controls{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:8px;
+}
+
+.qty-controls button{
+width:30px;
+height:30px;
+border:1px solid #ddd;
+background:white;
+cursor:pointer;
+}
+
+.qty-controls span{
+font-weight:500;
+}
+
+/* REMOVE */
+
+.remove-link{
+background:none;
+border:none;
+color:#888;
+cursor:pointer;
+font-size:14px;
+}
+
+.remove-link:hover{
+color:#000;
+}
+
+/* TOTAL PRICE */
+
+.cart-total{
+font-weight:600;
+min-width:80px;
+text-align:right;
+}
+
+/* SUMMARY */
+
+.cart-summary{
+border:1px solid #eee;
+padding:20px;
+border-radius:8px;
+height:fit-content;
+}
+
+.summary-line{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+}
+
+.summary-total{
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+font-weight:600;
+border-top:1px solid #eee;
+padding-top:10px;
+}
+
+/* BUTTON */
+
+.checkout-btn{
+width:100%;
+margin-top:20px;
+padding:12px;
+background:black;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.checkout-btn:hover{
+background:#333;
+}
+
+.continue-link{
+display:block;
+text-align:center;
+margin-top:15px;
+color:#666;
+text-decoration:none;
+}
+
+/* EMPTY CART */
+
+.empty-cart{
+text-align:center;
+padding:60px;
+}
+
+.shop-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:black;
+color:white;
+text-decoration:none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.cart-layout{
+grid-template-columns:1fr;
+}
+
+.cart-item{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.cart-total{
+text-align:left;
+}
+
+}
+.shipping-message{
+margin-top:12px;
+font-size:14px;
+color:#666;
+}
+.shipping-progress{
+margin-top:20px;
+margin-bottom:20px;
+}
+
+.shipping-text{
+font-size:14px;
+margin-bottom:6px;
+color:#444;
+}
+
+.progress-bar{
+width:100%;
+height:8px;
+background:#eee;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress-fill{
+height:100%;
+background:#000;
+transition:width 0.4s ease;
+}

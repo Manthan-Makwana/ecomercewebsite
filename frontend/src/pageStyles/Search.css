@@ -1,0 +1,53 @@
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.search-input {
+  width: 0;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background: white;
+  transition: width 0.35s ease, opacity 0.25s ease;
+  opacity: 0;
+  font-size: 14px;
+}
+
+/* Expanded state */
+.search-form.active .search-input {
+  width: 180px;
+  opacity: 1;
+  margin-right: 8px;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* Remove focus outline */
+.search-icon:focus,
+.search-icon:active {
+  outline: none;
+  border: none;
+}
+
+.search-icon .MuiSvgIcon-root {
+  color: #fff;
+  font-size: 1.6rem;
+}

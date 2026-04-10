@@ -1,0 +1,57 @@
+.checkout-container{
+max-width:700px;
+margin:40px auto;
+padding:30px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.checkout-title{
+font-size:26px;
+margin-bottom:25px;
+text-align:center;
+}
+
+.shipping-form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+}
+
+.form-group label{
+margin-bottom:6px;
+font-weight:500;
+}
+
+.form-group input{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+}
+
+.form-row{
+display:flex;
+gap:15px;
+}
+
+.shipping-btn{
+margin-top:10px;
+padding:12px;
+background:black;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+.shipping-btn:hover{
+background:#333;
+}

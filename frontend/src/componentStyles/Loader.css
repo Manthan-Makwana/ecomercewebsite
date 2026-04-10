@@ -1,0 +1,250 @@
+/* Loader.css - Masterpiece Edition */
+
+.loader-masterpiece {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F9F7F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.loader-frame {
+  position: relative;
+  width: 600px;
+  max-width: 90vw;
+  padding: 3rem;
+  background: #FFFFFF;
+  border: 1px solid #EAE8E4;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.1);
+}
+
+/* Insignia */
+.loader-insignia {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 3rem;
+}
+
+.insignia-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate 12s linear infinite;
+}
+
+.ring-segment {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    transparent 0%,
+    #8C7B75 20%,
+    #8C7B75 80%,
+    transparent 100%
+  );
+  transform-origin: center;
+}
+
+.ring-segment:nth-child(1) { transform: rotate(0deg); }
+.ring-segment:nth-child(2) { transform: rotate(120deg); }
+.ring-segment:nth-child(3) { transform: rotate(240deg); }
+
+.insignia-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #EAE8E4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #1C1C1C;
+  letter-spacing: 0.1em;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Statement */
+.loader-statement {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.statement-line {
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.statement-word {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #1C1C1C;
+  letter-spacing: 0.1em;
+  margin: 0 0.25rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealWord 0.6s ease forwards;
+}
+
+.statement-word.accent {
+  font-weight: 400;
+  color: #8C7B75;
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+}
+
+@keyframes revealWord {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Measure */
+.loader-measure {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.measure-track {
+  height: 1px;
+  background: #EAE8E4;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.measure-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #8C7B75;
+  transition: width 0.1s linear;
+}
+
+.measure-number {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Inter', monospace;
+  font-size: 0.875rem;
+  color: #A89F91;
+}
+
+.number-current {
+  font-size: 1rem;
+  color: #1C1C1C;
+  font-weight: 400;
+}
+
+.number-total {
+  opacity: 0.5;
+}
+
+.number-current::after {
+  content: '%';
+  margin-left: 0.1rem;
+  font-size: 0.75rem;
+  color: #8C7B75;
+}
+
+/* Texture */
+.loader-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.texture-grain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(#8C7B75 0.5px, transparent 0.5px),
+    radial-gradient(#A89F91 0.5px, transparent 0.5px);
+  background-size: 40px 40px, 80px 80px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.1;
+  animation: grainShift 20s linear infinite;
+}
+
+@keyframes grainShift {
+  from { background-position: 0 0, 20px 20px; }
+  to { background-position: 40px 40px, 60px 60px; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .loader-frame {
+    padding: 2rem;
+  }
+  
+  .statement-word {
+    font-size: 1.5rem;
+  }
+  
+  .statement-word.accent {
+    font-size: 2rem;
+  }
+  
+  .loader-measure {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader-insignia {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 2rem;
+  }
+  
+  .insignia-center {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .statement-word {
+    font-size: 1.2rem;
+  }
+  
+  .statement-word.accent {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+  .loader-measure {
+    width: 200px;
+  }
+}

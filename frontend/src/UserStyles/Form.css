@@ -1,0 +1,855 @@
+/* Form.css - Soft Neutral Luxury Edition */
+
+.register-page {
+  min-height: 100vh;
+  background-color: #FAF9F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.register-container {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 700px;
+  background: #FFFFFF;
+  border: 1px solid #E5E3DF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand Side */
+.register-brand {
+  background: #F7F5F0;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(#8C7B75 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.brand-content {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: #8C7B75;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.brand-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1C1C1C;
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+}
+
+.brand-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #8C7B75;
+  margin-top: 1.5rem;
+}
+
+.brand-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #6F6F6F;
+  margin: 0 0 2rem;
+  font-weight: 300;
+}
+
+.brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.feature-dot {
+  width: 4px;
+  height: 4px;
+  background: #8C7B75;
+  border-radius: 50%;
+}
+
+.feature-text {
+  font-size: 0.875rem;
+  color: #1C1C1C;
+  font-weight: 300;
+}
+
+/* Form Side */
+.register-form-wrapper {
+  padding: 4rem 3rem;
+  background: #FFFFFF;
+}
+
+.form-header {
+  margin-bottom: 2.5rem;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #1C1C1C;
+  margin: 0 0 0.5rem;
+}
+
+.form-subtitle {
+  font-size: 0.875rem;
+  color: #6F6F6F;
+  margin: 0;
+  font-weight: 300;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form Fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.field-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-icon {
+  position: absolute;
+  left: 1rem;
+  color: #A89F91;
+  font-size: 1.25rem !important;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: 1px solid #E5E3DF;
+  background: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9375rem;
+  color: #1C1C1C;
+  transition: all 0.2s ease;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: #8C7B75;
+  box-shadow: 0 0 0 3px rgba(140, 123, 117, 0.05);
+}
+
+.field-input::placeholder {
+  color: #A89F91;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.field-toggle {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #A89F91;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.field-toggle:hover {
+  color: #8C7B75;
+}
+
+/* Field States */
+.form-field.has-error .field-input {
+  border-color: #C5A39E;
+}
+
+.field-error {
+  font-size: 0.75rem;
+  color: #C5A39E;
+  margin-top: 0.25rem;
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  color: #A89F91;
+  margin-top: 0.25rem;
+}
+
+/* Terms */
+.form-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.terms-checkbox {
+  width: 16px;
+  height: 16px;
+  margin-top: 0.125rem;
+  border: 1px solid #E5E3DF;
+  background: #FFFFFF;
+  cursor: pointer;
+  accent-color: #8C7B75;
+}
+
+.terms-label {
+  font-size: 0.8125rem;
+  color: #6F6F6F;
+  line-height: 1.5;
+}
+
+.terms-link {
+  color: #8C7B75;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.terms-link:hover {
+  border-bottom-color: #8C7B75;
+}
+
+/* Submit Button */
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background: #F7F5F0;
+  border: 1px solid #E5E3DF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #6F6F6F;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.form-submit:hover:not(:disabled) {
+  background: #8C7B75;
+  border-color: #8C7B75;
+  color: #FFFFFF;
+}
+
+.form-submit.is-valid {
+  background: #8C7B75;
+  border-color: #8C7B75;
+  color: #FFFFFF;
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.form-footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E5E3DF;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: #6F6F6F;
+  margin-right: 0.5rem;
+}
+
+.footer-link {
+  font-size: 0.875rem;
+  color: #8C7B75;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #1C1C1C;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .register-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .register-brand {
+    padding: 3rem 2rem;
+  }
+
+  .brand-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-page {
+    padding: 1rem;
+  }
+
+  .register-form-wrapper {
+    padding: 2.5rem 2rem;
+  }
+
+  .brand-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .field-input {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    font-size: 0.875rem;
+  }
+
+  .field-icon {
+    left: 0.75rem;
+    font-size: 1rem !important;
+  }
+
+  .brand-features {
+    gap: 0.75rem;
+  }
+
+  .feature-text {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Loading State */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.form-submit.loading {
+  background: linear-gradient(90deg, #F7F5F0 25%, #E5E3DF 50%, #F7F5F0 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+  pointer-events: none;
+  color: transparent;
+}
+
+/* Success State */
+.form-submit.success {
+  background: #8C7B75;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+
+/* Print */
+@media print {
+  .register-page {
+    background: white;
+    padding: 0;
+  }
+
+  .register-brand {
+    display: none;
+  }
+
+  .register-container {
+    border: none;
+    grid-template-columns: 1fr;
+  }
+}
+/* Add to Form.css */
+
+/* Avatar Section */
+.avatar-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E5E3DF;
+}
+
+.avatar-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.avatar-optional {
+  font-size: 0.6875rem;
+  font-weight: 300;
+  color: #A89F91;
+  text-transform: lowercase;
+}
+
+.avatar-upload {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Avatar Preview */
+.avatar-preview-wrapper {
+  flex-shrink: 0;
+}
+
+.avatar-preview {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 1px #E5E3DF;
+}
+
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #E5E3DF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6F6F6F;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.avatar-preview:hover .avatar-remove {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.avatar-remove:hover {
+  background: #F7F5F0;
+  color: #C5A39E;
+  border-color: #C5A39E;
+}
+
+.avatar-remove svg {
+  font-size: 1rem !important;
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #F7F5F0;
+  border: 1px dashed #E5E3DF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A89F91;
+}
+
+.avatar-placeholder svg {
+  font-size: 2rem !important;
+  opacity: 0.5;
+}
+
+/* Avatar Actions */
+.avatar-actions {
+  flex: 1;
+  min-width: 200px;
+}
+
+.avatar-input {
+  display: none;
+}
+
+.avatar-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: #FFFFFF;
+  border: 1px solid #E5E3DF;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #6F6F6F;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.avatar-button:hover {
+  border-color: #8C7B75;
+  color: #8C7B75;
+  background: #F7F5F0;
+}
+
+.avatar-button svg {
+  font-size: 1.125rem !important;
+}
+
+.avatar-hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
+  color: #A89F91;
+}
+
+.avatar-error {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
+  color: #C5A39E;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .avatar-upload {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .avatar-preview-wrapper {
+    align-self: center;
+  }
+
+  .avatar-actions {
+    width: 100%;
+  }
+
+  .avatar-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-preview,
+  .avatar-placeholder {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar-placeholder svg {
+    font-size: 1.5rem !important;
+  }
+
+  .avatar-button {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+}
+/* Add to Form.css - Login Specific Styles */
+
+.login-page {
+  min-height: 100vh;
+  background-color: #FAF9F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.login-container {
+  max-width: 1100px;
+  width: 100%;
+  min-height: 600px;
+  background: #FFFFFF;
+  border: 1px solid #E5E3DF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand Side */
+.login-brand {
+  background: #F7F5F0;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(#8C7B75 0.5px, transparent 0.5px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Testimonial */
+.brand-testimonial {
+  margin: 2rem 0;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.avatar-group img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  margin-right: -8px;
+  transition: transform 0.2s ease;
+}
+
+.avatar-group img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.testimonial-text {
+  font-size: 0.875rem;
+  color: #6F6F6F;
+  font-weight: 300;
+}
+
+/* Form Side */
+.login-form-wrapper {
+  padding: 3rem;
+  background: #FFFFFF;
+}
+
+/* Form Options */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #E5E3DF;
+  border-radius: 3px;
+  cursor: pointer;
+  accent-color: #8C7B75;
+}
+
+.checkbox-text {
+  font-size: 0.875rem;
+  color: #6F6F6F;
+}
+
+.forgot-link {
+  font-size: 0.875rem;
+  color: #8C7B75;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.forgot-link:hover {
+  border-bottom-color: #8C7B75;
+  color: #1C1C1C;
+}
+
+/* Demo Credentials */
+.demo-credentials {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #F7F5F0;
+  border: 1px solid #E5E3DF;
+  border-radius: 6px;
+}
+
+.demo-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #8C7B75;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem;
+}
+
+.demo-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.demo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: #6F6F6F;
+}
+
+.demo-icon {
+  font-size: 1rem !important;
+  color: #8C7B75;
+}
+
+/* Submit Button */
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background: #8C7B75;
+  border: 1px solid #8C7B75;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+}
+
+.form-submit:hover {
+  background: #A89F91;
+  border-color: #A89F91;
+}
+
+.form-submit:active {
+  transform: translateY(1px);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .login-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .login-brand {
+    display: none;
+  }
+
+  .login-form-wrapper {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 1rem;
+  }
+
+  .login-form-wrapper {
+    padding: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .form-options {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .forgot-link {
+    align-self: flex-end;
+  }
+
+  .demo-items {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .demo-item {
+    font-size: 0.75rem;
+  }
+}

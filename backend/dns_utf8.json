@@ -1,0 +1,44 @@
+﻿[
+    {
+        "NameTarget":  "ac-kg6y0pp-shard-00-00.zwggj5n.mongodb.net",
+        "Priority":  0,
+        "Weight":  0,
+        "Port":  27017,
+        "Name":  "_mongodb._tcp.awt.zwggj5n.mongodb.net",
+        "Type":  33,
+        "CharacterSet":  1,
+        "Section":  1,
+        "DataLength":  16,
+        "TTL":  60,
+        "QueryType":  33,
+        "Target":  "ac-kg6y0pp-shard-00-00.zwggj5n.mongodb.net"
+    },
+    {
+        "NameTarget":  "ac-kg6y0pp-shard-00-01.zwggj5n.mongodb.net",
+        "Priority":  0,
+        "Weight":  0,
+        "Port":  27017,
+        "Name":  "_mongodb._tcp.awt.zwggj5n.mongodb.net",
+        "Type":  33,
+        "CharacterSet":  1,
+        "Section":  1,
+        "DataLength":  16,
+        "TTL":  60,
+        "QueryType":  33,
+        "Target":  "ac-kg6y0pp-shard-00-01.zwggj5n.mongodb.net"
+    },
+    {
+        "NameTarget":  "ac-kg6y0pp-shard-00-02.zwggj5n.mongodb.net",
+        "Priority":  0,
+        "Weight":  0,
+        "Port":  27017,
+        "Name":  "_mongodb._tcp.awt.zwggj5n.mongodb.net",
+        "Type":  33,
+        "CharacterSet":  1,
+        "Section":  1,
+        "DataLength":  16,
+        "TTL":  60,
+        "QueryType":  33,
+        "Target":  "ac-kg6y0pp-shard-00-02.zwggj5n.mongodb.net"
+    }
+]

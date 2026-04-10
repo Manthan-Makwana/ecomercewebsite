@@ -1,0 +1,334 @@
+/* Profile.css — matches the luxury soft-neutral design system */
+
+.profile-page {
+  min-height: 100vh;
+  background-color: #FAF9F6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding-bottom: 4rem;
+}
+
+/* ── Page Header ── */
+.profile-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E3DF;
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-header-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  color: #8C7B75;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.profile-header h1 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #1C1C1C;
+  margin: 0;
+}
+
+/* ── Layout ── */
+.profile-layout {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ── Left: User Info Card ── */
+.profile-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E3DF;
+  padding: 2rem;
+  text-align: center;
+  position: sticky;
+  top: 90px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8C7B75, #A89F91);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 2rem;
+  color: #FFFFFF;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.profile-card-name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  margin: 0 0 0.25rem;
+}
+
+.profile-card-email {
+  font-size: 0.85rem;
+  color: #8C7B75;
+  margin: 0 0 1.25rem;
+  word-break: break-all;
+}
+
+.profile-role-badge {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  background: #F7F5F0;
+  border: 1px solid #E5E3DF;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #8C7B75;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+.profile-role-badge.admin {
+  background: #1C1C1C;
+  color: #FAF9F6;
+  border-color: #1C1C1C;
+}
+
+.profile-card-divider {
+  height: 1px;
+  background: #E5E3DF;
+  margin: 1.25rem 0;
+}
+
+.profile-quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-quick-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #6F6F6F;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+
+.profile-quick-link:hover {
+  background: #F7F5F0;
+  color: #1C1C1C;
+}
+
+.profile-quick-link.active-link {
+  background: #F7F5F0;
+  color: #8C7B75;
+  font-weight: 500;
+}
+
+/* ── Right: Forms ── */
+.profile-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-section {
+  background: #FFFFFF;
+  border: 1px solid #E5E3DF;
+  padding: 2rem;
+}
+
+.profile-section-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #8C7B75;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.4rem;
+}
+
+.profile-section-subtitle {
+  font-size: 0.875rem;
+  color: #6F6F6F;
+  margin: 0 0 1.75rem;
+  font-weight: 300;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.profile-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.profile-field label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1C1C1C;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.profile-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile-input-icon {
+  position: absolute;
+  left: 0.9rem;
+  color: #A89F91;
+  font-size: 1.1rem !important;
+  pointer-events: none;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  border: 1px solid #E5E3DF;
+  background: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
+  color: #1C1C1C;
+  transition: all 0.2s ease;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.profile-input:focus {
+  outline: none;
+  border-color: #8C7B75;
+  box-shadow: 0 0 0 3px rgba(140, 123, 117, 0.05);
+}
+
+.profile-input::placeholder {
+  color: #A89F91;
+  font-weight: 300;
+}
+
+.profile-input:disabled {
+  background: #F7F5F0;
+  color: #A89F91;
+  cursor: not-allowed;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  color: #A89F91;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover { color: #8C7B75; }
+
+.profile-save-btn {
+  align-self: flex-start;
+  padding: 0.75rem 2rem;
+  background: #8C7B75;
+  border: 1px solid #8C7B75;
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0;
+}
+
+.profile-save-btn:hover:not(:disabled) {
+  background: #A89F91;
+  border-color: #A89F91;
+}
+
+.profile-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Toast-style inline feedback */
+.profile-feedback {
+  padding: 0.65rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.profile-feedback.success {
+  background: #F0FAF4;
+  color: #276749;
+  border: 1px solid #C6F0D7;
+}
+
+.profile-feedback.error {
+  background: #FFF5F5;
+  color: #C0392B;
+  border: 1px solid #FADADD;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    position: static;
+  }
+
+  .profile-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-layout {
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .profile-section {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .profile-save-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
